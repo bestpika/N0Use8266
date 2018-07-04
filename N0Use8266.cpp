@@ -118,12 +118,12 @@ std::pair<String, String> N0Use8266::parseCmd(String msg)
   char d = '=';
   int to = 0;
   to = msg.indexOf(d, 0);
-  String cmdName = msg.substring(0, to);
-  String cmdValue = msg.substring(to + 1);
-  if (!cmdName.equalsIgnoreCase(cmdValue))
+  String name = msg.substring(0, to);
+  String value = msg.substring(to + 1);
+  if (!name.equalsIgnoreCase(value))
   {
-    cmd.first = cmdName;
-    cmd.second = cmdValue;
+    cmd.first = name;
+    cmd.second = value;
   }
   return cmd;
 }
