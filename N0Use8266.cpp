@@ -28,6 +28,26 @@ String N0Use8266::decodeUri(String s)
   return a;
 }
 
+int N0Use8266::getCks(std::vector<byte> *data, int startIdx, int endedIdx)
+{
+  int cks = 0;
+  for (int i = startIdx; i <= endedIdx; i++)
+  {
+    cks += (int)data->at(i);
+  }
+  cks = 256 - (cks % 256);
+  return cks;
+}
+
+String N0Use8266::getDateTimeStr()
+{
+  time_t timeNow = time(nullptr);
+  tm *dateTime = localtime(&timeNow);
+  String dateTimeStr = asctime(dateTime);
+  dateTimeStr.replace("\n", "");
+  return dateTimeStr;
+}
+
 unsigned char N0Use8266::hex2Int(char c)
 {
   if ('0' <= c && c <= '9')
@@ -101,15 +121,6 @@ std::tuple<uint8_t, uint8_t, uint8_t> N0Use8266::HSV2RGB(uint16_t H, uint16_t S,
     }
   }
   return std::make_tuple(r, g, b);
-}
-
-String N0Use8266::getDateTimeStr()
-{
-  time_t timeNow = time(nullptr);
-  tm *dateTime = localtime(&timeNow);
-  String dateTimeStr = asctime(dateTime);
-  dateTimeStr.replace("\n", "");
-  return dateTimeStr;
 }
 
 std::pair<String, String> N0Use8266::parseCmd(String msg)

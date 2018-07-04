@@ -8,6 +8,7 @@ class N0Use8266
 {
 public:
   static String decodeUri(String s);
+  static int getCks(std::vector<byte> *data, int startIdx, int endedIdx);
   static String getDateTimeStr();
   static unsigned char hex2Int(char c);
   static std::tuple<uint8_t, uint8_t, uint8_t> HSV2RGB(uint16_t H, uint16_t S, uint16_t V);
