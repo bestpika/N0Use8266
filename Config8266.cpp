@@ -10,13 +10,15 @@ bool Config8266::init()
   File file = SPIFFS.open(fileName, "r");
   if (!file)
   {
-    save(); // 產生一個空的檔案
+    // 產生空資料
+    root = doc.to<JsonObject>();
+    save();
   }
   else
   {
     file.close();
-    load();
   }
+  load();
   print();
   return true;
 }
@@ -45,7 +47,6 @@ bool Config8266::reset()
 bool Config8266::save()
 {
   File file = SPIFFS.open(fileName, "w");
-  root = doc.to<JsonObject>();
   serializeJson(root, file);
   file.close();
   return true;
