@@ -1,8 +1,10 @@
 #ifndef N0USE8266_H
 #define N0USE8266_H
 
+#include <ctime>
+#include <tuple>
+#include <vector>
 #include "Arduino.h"
-#include "time.h"
 
 class N0Use8266
 {
