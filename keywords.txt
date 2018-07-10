@@ -6,30 +6,30 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-Config8266          KEYWORD1
-N0Use8266           KEYWORD1
-ESP8266WiFiMultiEx  KEYWORD1
+Config8266	KEYWORD1
+N0Use8266	KEYWORD1
+ESP8266WiFiMultiEx	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 
-init                KEYWORD2
-load                KEYWORD2
-print               KEYWORD2
-reset               KEYWORD2
-save                KEYWORD2
+init	KEYWORD2
+load	KEYWORD2
+print	KEYWORD2
+reset	KEYWORD2
+save	KEYWORD2
 
-decodeUri           KEYWORD2
-getCks              KEYWORD2
-getDateTimeStr      KEYWORD2
-hex2Int             KEYWORD2
-HSV2RGB             KEYWORD2
-parseCmd            KEYWORD2
-reboot              KEYWORD2
-stringSplit         KEYWORD2
+decodeUri	KEYWORD2
+getCks	KEYWORD2
+getDateTimeStr	KEYWORD2
+hex2Int	KEYWORD2
+HSV2RGB	KEYWORD2
+parseCmd	KEYWORD2
+reboot	KEYWORD2
+stringSplit	KEYWORD2
 
-addAPs              KEYWORD2
+addAPs	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
