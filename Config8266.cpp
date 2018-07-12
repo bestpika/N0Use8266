@@ -34,6 +34,7 @@ bool Config8266::load()
 
 void Config8266::print()
 {
+  Serial.flush();
   serializeJsonPretty(root, Serial);
   Serial.println();
 }
