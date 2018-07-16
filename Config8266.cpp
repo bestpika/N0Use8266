@@ -42,6 +42,7 @@ void Config8266::print()
 bool Config8266::reset()
 {
   SPIFFS.remove(fileName);
+  ESP.eraseConfig();
   return init();
 }
 
