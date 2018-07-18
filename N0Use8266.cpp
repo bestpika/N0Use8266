@@ -141,7 +141,7 @@ std::pair<String, String> N0Use8266::parseCmd(String msg)
 
 void N0Use8266::reboot()
 {
-  delay(1000);
+  delay(5000);
   ESP.reset();
 }
 
